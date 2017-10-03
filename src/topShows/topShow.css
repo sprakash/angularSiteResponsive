@@ -1,0 +1,9 @@
+.fav-true {
+	color: seagreen;
+	font-weight: bold;
+}
+
+.fav-false {
+	color: coral;
+	opacity: .4;
+}

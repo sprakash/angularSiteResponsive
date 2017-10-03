@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<script src="https://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
+	<script type="text/javascript" src="topShows/topShowController.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	<link rel="stylesheet" href="topShows/topShow.css"/>
+
+
+</head>
+<body>
+	<!--<input type="text" ng-model="name">
+	<h1>Hello my name is {{name}}</h1>-->
+	<div ng-controller="TopShowController">
+		<h1> Total shows : {{totalShows}}</h1>
+		<ul class="unstyled">
+			<li ng-repeat="show in shows"> 
+				<input type="checkbox" ng-model="show.fav">
+				<span class="fav-{{show.fav}}">{{show.text}}</span>
+			</li>
+		</ul>
+	</div>
+
+	<form class="form-horizontal">
+		<input type="text" ng-model="formShowText" ng-model-instant>
+		<button class="btn" ng-click="addShow()"><i class="icon-plus">ADD</i></button>
+	</form>
+
+</body>
+</html>
